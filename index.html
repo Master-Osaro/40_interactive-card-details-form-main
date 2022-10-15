@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="css/style.css">
+  <title>Interactive card details form | Frontend Mentor </title>
+</head>
+<body>
+  <main>
+    <div class="cards">
+      <div class="card__1">
+        <div class="card__1--logo">
+          <img src="images/card-logo.svg" alt="">
+        </div>
+        <div class="card__1--content-wrapper">
+          <p class="card__1--cardnum">
+            0000 0000 0000 0000
+          </p>
+          <div class="card__1--wrapper-namedate">
+            <p class="card__1--name">JANE APPLESEED</p>
+            <div class="expiry-date__wrapper">
+              <p class="card__1--expdate-mm">00/</p>
+              <p class="card__1--expdate-yy">00</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="card__2">
+        <!-- <img src="images/bg-card-back.png" alt=""> -->
+        <p class="cvc">000</p>
+      </div>  
+    </div>
+    <form action="">
+      <div class="form__group form__group--cardname">
+        <label for="card__name">Cardholder Name</label><input type="text" id="card__name" placeholder=" e.g. Jane Appleseed">
+      </div>
+      <div class="form__group form__group--cardnum">
+        <label for="card__number">Card Number</label><input type="text" id="card__number" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+        <p class="card__number-error"></p>
+      </div>
+      <div class="card__date--wrapper">
+        <div class="form__group form__group--date">
+          <label for="date">Exp. Date (MM/YY)</label><input type="text" placeholder="MM" id="date" class="" maxlength="2"><input type="text" id="year" placeholder="YY" class="form__group--date" maxlength="2">
+          <p class="card__date-error"></p>
+        </div>
+        <div class="form__group form__group-cvc">
+          <label for="cvc">CVC</label><input type="text" id="cvc" placeholder="  e.g. 123" maxlength="3">
+          <p class="card__cvc-error"></p>
+        </div>
+      </div>
+      
+      <div class="form__group">
+        <input type="submit" value="Confirm" class="submit__btn">
+      </div>
+      
+    </form>
+    <form action="" class="completed">
+      <img src="images/icon-complete.svg" alt="">
+      <h1>Thank You</h1>
+      <p>We have added your card details</p>
+      <input type="submit" value="Continue" class="continue__btn">
+    </form>
+  </main>
+
+  <!-- 0000 0000 0000 0000
+  Jane Appleseed
+  00/00 -->
+
+
+  <!-- Completed state start -->
+
+  <!-- Thank you!
+  We've added your card details
+  Continue -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js" integrity="sha512-kVlGhj2qFy+KBCFuvjBJTGUMxbdqJKs4yK2jh0e0VPhWUPiPC87bzm4THmaaIee3Oj7j6sDpTTgm2EPPiESqBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

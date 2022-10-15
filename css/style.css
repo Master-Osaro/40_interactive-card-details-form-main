@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input, button{
+    font-family: inherit;
+}
+
+:root{
+    /* ## Colors */
+
+    /* ### Primary */
+
+    --linear-gradient-active-input-border: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --red-input-errors: hsl(0, 100%, 66%);
+
+    /* ### Neutral */
+
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+
+    /* ## Typography */
+
+    /* ### Body Copy */
+
+    --font-size: 18px;
+    --font-family: "Space Grotesk", sans-serif
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: var(--font-family);
+    background: url(../images/bg-main-desktop.png) 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 30% 100%;
+    padding: 1rem;
+}
+main{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.card__1{
+    width: 447px;
+    height: 245px;
+    background: url(../images/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    left: -3rem;
+    color: var(--white);
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.card__2{
+    width: 447px;
+    height: 245px;
+    background: url(../images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: var(--white);
+    padding: 2rem 3rem;
+    position: relative;
+}
+
+.card__1--content-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.card__1--wrapper-namedate{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.expiry-date__wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.card__2 .cvc{
+    position: absolute;
+    right: 3rem;
+    top: 7rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.45rem;
+    padding-left: 2rem;
+}
+
+label{
+    text-transform: uppercase;
+}
+
+input{
+    border-radius: 0.2rem;
+    border: none;
+}
+
+.form__group input, .form__group label{
+    display: block;
+}
+.form__group--date input{
+    display: inline;
+}
+
+.form__group-cvc{
+    padding-left: 2rem;
+}
+
+.continue__btn,
+.form__group input{
+    padding: 0.7rem 0.4rem ;
+    border: 1px solid var(--dark-grayish-violet);
+    cursor: pointer;
+}
+
+.error-input{
+    border: 1px solid var(--red-input-errors) !important;
+}
+.card__number-error,
+.card__date-error,
+.card__cvc-error {
+    color: var(--red-input-errors);
+    font-size: 0.65rem;
+    margin-top: 0.3rem;
+}
+#date, #year{
+    max-width: 72px;
+}
+
+#year{
+    margin-left: 0.8rem;
+}
+
+.submit__btn,
+.form__group--cardname input,
+.form__group--cardnum input{
+    width: 100%;
+}
+
+.card__date--wrapper{
+    display: flex;
+}
+
+.submit__btn, .continue__btn{
+    background: var(--very-dark-violet);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+}
+
+.completed{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    padding-left: 3rem;
+}
+.completed h1{
+    text-transform: uppercase;
+}
+.completed input{
+    width: 100%;
+}
+
+
+
+@media screen and (max-width: 992px) {
+      body{
+        background: url(../images/bg-main-mobile.png);
+        background-size: 250% 30%;
+        background-repeat: no-repeat;
+        display: block;
+      }
+      main{
+        flex-direction: column;
+      }
+      .cards{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: unset;
+    }
+
+    .card__1{
+        position: relative;
+        z-index: 3;
+        top: -6.5rem;
+    }
+    .card__2{
+        position: relative;
+    }
+    form{
+        width: 100%;
+        max-width: 700px;
+    }
+    .completed{
+        padding-left: unset;
+        margin-bottom: 10rem;
+    }
+}
+@media screen and (max-width: 576px) {   
+    .cards{
+        width: 100%;
+    }
+    .card__1, .card__2{
+        height: 163.33px;
+        width: 298px;
+        background-position: 100% 100%;
+        margin: 0 auto;
+    }
+
+    .card__1{
+        position: relative;
+        z-index: 3;
+        top: -4.5rem;
+        left: -0.85rem;
+    }
+    .card__2{
+        position: relative;
+        right: -1.8rem;
+    }
+    .card__2 .cvc {
+        top: 4.4rem;
+    }
+}
