@@ -48,9 +48,15 @@ Users should be able to:
 
 - GSAP Animation lib
 ```js
-function animate_text_img() {
-    gsap.fromTo(".card-img", {duration : 1, x:300, ease:'back'}, {duration : 1, x:0, ease:'back'});
-    gsap.fromTo(".card-text", {duration : 1, y:-300, ease:'back'}, {duration : 1, y:0, ease:'back'});
+//GSAP animations
+function card_1_animate() {
+    gsap.fromTo(".card__1", {duration : 1, x:15, ease:'back'}, {duration : 1, x:0, ease:'back'});
+}
+function card_2_animate() {
+    gsap.fromTo(".card__2", {duration : 1, x:25, ease:'back'}, {duration : 1, x:0, ease:'back'});
+}
+function animate_cards() {
+    gsap.fromTo(".cards", {duration : 1, x:50, ease:'back'}, {duration : 1, x:0, ease:'back'});
 }
 
 ```
