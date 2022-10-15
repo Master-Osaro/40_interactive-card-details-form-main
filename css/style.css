@@ -189,7 +189,7 @@ input{
 
 
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
       body{
         background: url(../images/bg-main-mobile.png);
         background-size: 250% 30%;
